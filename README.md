@@ -19,5 +19,5 @@
 
 # Commands Guidelines
 
-**Clone a project --> `git clone` **https://github.com/BaldeMountaga/Turntabl_Java_OOP.git**
+**Clone a project --> `git clone`https://github.com/BaldeMountaga/Turntabl_Java_OOP.git**
 
