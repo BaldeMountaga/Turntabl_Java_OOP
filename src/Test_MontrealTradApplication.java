@@ -18,16 +18,16 @@ public class Test_MontrealTradApplication {
       ProductPricingService productPricingService;
 
     @InjectMocks
-    Stock stock = new Stock("ABC","DEF","GHI");
+    Stock stock = new Stock("AZC","AEE","BKH");
 
     @InjectMocks
-    Future future = new Future("CBA","FED","IHG", 12,2020);
+    Future future = new Future("CZA","EEA","HKB", 12,2020);
 
     @Before
     public void setup(){
         montrealTradeApplication = new MontrealTradeApplication();
-        when(productPricingService.price(anyString(),anyString())).thenReturn(10.0);
-        when(productPricingService.price(anyString(),anyString(),anyInt(),anyInt())).thenReturn(10.0);
+        when(productPricingService.price(anyString(),anyString())).thenReturn(55.0);
+        when(productPricingService.price(anyString(),anyString(),anyInt(),anyInt())).thenReturn(55.0);
     }
 
 
@@ -41,8 +41,8 @@ public class Test_MontrealTradApplication {
     public void test_totalValueOfDaysTradedProducts() throws ProductAlreadyRegisteredException {
         montrealTradeApplication.addNewProduct(stock);
         montrealTradeApplication.addNewProduct(future);
-        montrealTradeApplication.trade(stock,100);
-        montrealTradeApplication.trade(future,1);
+        montrealTradeApplication.trade(stock,1000);
+        montrealTradeApplication.trade(future,10);
         assertEquals("Failed: Trade", montrealTradeApplication.totalValueOfDaysTradedProducts(), 1010, 0.0);
     }
 
@@ -50,13 +50,13 @@ public class Test_MontrealTradApplication {
     public void test_trading() throws ProductAlreadyRegisteredException {
         montrealTradeApplication.addNewProduct(stock);
         montrealTradeApplication.addNewProduct(future);
-        montrealTradeApplication.trade(stock,100);
-        montrealTradeApplication.trade(future,1);
-        assertEquals("Failed: Trade", montrealTradeApplication.totalTradeQuantityForDay(), 101, 0.0);
+        montrealTradeApplication.trade(stock,1000);
+        montrealTradeApplication.trade(future,10);
+        assertEquals("Failed: Trade", montrealTradeApplication.totalTradeQuantityForDay(), 1001, 0.0);
     }
 
     public static void main(String[] args) {
-        Result result = org.junit.runner.JUnitCore.runClasses(TestStock.class);
+        Result result = org.junit.runner.JUnitCore.runClasses(Test_Stock.class);
         for (Failure f : result.getFailures()){
             System.out.println(f);
         }
