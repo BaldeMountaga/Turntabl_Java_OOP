@@ -1,6 +1,12 @@
 # Turntabl_Java_OOP Assessment
 
-## To use this porject
+## Contribution Guidelines
+    1. Fork this repository to get a local copy of this repo in your repo
+    2. Clone your local copy
+    3. Set up the upstream push and pull link
+    4. Start working on a feature
+    5. Push your feature addition
+
 
 **Clone the project**
 
