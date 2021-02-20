@@ -6,7 +6,7 @@
 
 `git clone` **https://github.com/BaldeMountaga/Turntabl_Java_OOP.git**
 
-# After cloning you get now a local copy of the project
+# After cloning it you get now a local copy of the project
 **Open it in an IDE or text editor preferably in an IDE to see the code**
 
 # Testing
