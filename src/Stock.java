@@ -1,9 +1,11 @@
 public class Stock extends Product{
 
+    //member variables
     private String exchange;
     private String ticker;
     private ProductPricingService productPricingService;
 
+    //constructor
     public Stock(String productId, String exchange, String ticker) {
         super(productId);
         this.exchange = exchange;
@@ -14,6 +16,7 @@ public class Stock extends Product{
         super("");
     }
 
+    //getter and setters
     public String getExchange() {
         return exchange;
     }
@@ -30,8 +33,8 @@ public class Stock extends Product{
         this.ticker = ticker;
     }
 
+    //implement the get Price method from product class
     public Double getPrice() {
         return productPricingService.price(this.exchange,this.ticker);
     }
-
 }

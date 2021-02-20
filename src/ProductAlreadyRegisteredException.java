@@ -1,3 +1,5 @@
+
+//handling exception if a product already exist
 public class ProductAlreadyRegisteredException extends Exception{
 
     public ProductAlreadyRegisteredException() {

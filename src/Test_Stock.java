@@ -15,7 +15,7 @@ import static org.mockito.Mockito.*;
 
 public class Test_Stock {
 
-
+    //mocking the interface product pricing service to allow us to test its functionalities
     @Mock
     ProductPricingService productPricingService;
 
@@ -31,6 +31,7 @@ public class Test_Stock {
         stock.setExchange("EXCHANGE_A");
         assertSame("Failed: Stock Creation", "EXCHANGE_A", stock.getExchange());
     }
+
 
     public static void main(String[] args) {
         Result result = org.junit.runner.JUnitCore.runClasses(Test_Stock.class);
